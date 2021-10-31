@@ -1,0 +1,17 @@
+extends base
+block content
+    section.download-container
+        if status === 'success'
+            .found
+                h1 Download File
+                p This file was shared via ShareDrive and a link that automatically expires.
+                .file
+                    .file-icon
+                    .file-text
+                        div #{data.fileName}
+                        div #{data.fileSize}
+                a.btn.-blue(href=`${data.downloadLink}`) Download File
+        else if status === 'error'
+            .not-found
+                h1 The link has expired
+                img(src='/img/not-found.png', height='350px')

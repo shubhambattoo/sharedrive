@@ -1,0 +1,37 @@
+extends base
+block content
+    section.row#main-row(style="display: grid", aria-hidden="false")
+        .head
+            h1 Share any file anonymously and free
+            .meta Easily share the file across different devices. Upload any type and any size.
+        .file-selector-container#selector(style="display: block", aria-hidden="false")
+            .file-selector#drop-area
+                .file-selector-icon
+                .file-selector-text Drag and Drop file
+                input#file-input(type="file", name="file-input")
+                label.btn.-blue(for="file-input", role="button", title="select file to upload") Select file to upload
+        .selected-view#selected(style="display: none", aria-hidden="true")
+            .file-selected-container
+                .file-selected
+                    .file-selected-icon
+                    .file-selected-text#file
+                    .file-selected-remove#remove-btn(title='remove file')
+            button.btn.-blue#upl-btn Upload
+        .upload-progress-container#loading(style="display: none", aria-hidden="true")
+            .file-selected.file-selected--no-bg
+                .file-selected-icon
+                .file-selected-text#file-1
+            small.expiry Expires after 1 hour
+            .progress
+                progress
+    section.uploaded-container#uploaded(style="display: none", aria-hidden="true")
+        h1 Your file is ready to send
+        p 
+            | Copy the link to share your file: 
+            br 
+            span#file-2
+        input.w-100#link(type="text", name="link", readonly="readonly", value="your-file-link.jpg")
+        button.btn.-blue#copy-btn Copy
+        button.btn.btn--text-only#ok-btn Ok
+
+

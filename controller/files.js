@@ -21,12 +21,6 @@ let upload = multer({ storage, limits: { fileSize: 1000000 * 100 } }).single(
 
 exports.saveFile = (req, res) => {
   upload(req, res, async (err) => {
-    if (!req.file) {
-      return res.status(400).send({
-        status: 'error',
-        message: 'No file provided',
-      });
-    }
     if (err) {
       return res.status(500).send({ status: 'error', message: err.message });
     }

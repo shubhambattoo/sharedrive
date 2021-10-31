@@ -9,7 +9,8 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "watch:js": "rollup --config rollup.config.js -w",
-    "build:js": "NODE_ENV='production' && rollup --config rollup.config.js"
+    "build:js": "rollup --config rollup.config.js",
+    "heroku-postbuild": "npm run build:js"
   },
   "keywords": [],
   "author": "shubhambattoo",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.13",
     "rollup": "^2.58.3",
     "rollup-plugin-terser": "^7.0.2"

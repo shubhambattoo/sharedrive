@@ -10,7 +10,7 @@
     "dev": "nodemon server.js",
     "watch:js": "rollup --config rollup.config.js -w",
     "build:js": "rollup --config rollup.config.js",
-    "heroku-postbuild": "npm run build:js"
+    "heroku-postbuild": "npm run build:js && mkdir uploads"
   },
   "keywords": [],
   "author": "shubhambattoo",

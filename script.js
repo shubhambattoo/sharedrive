@@ -19,12 +19,7 @@ async function fetchData() {
       }
     }
   }
+  console.log('Job done!');
 }
 
-fetchData().then(() => {
-  console.log('Job done!');
-  process.exit(1);
-}).catch(err => {
-  console.log(err);
-  process.exit(1);
-});
+fetchData().then(process.exit);

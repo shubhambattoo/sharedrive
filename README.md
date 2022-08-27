@@ -2,7 +2,7 @@
 
 > ShareDrive is a file sharing service that allows users to share file with other users. You can easily share file with your friends and colleagues, the link expires after a certain time.
 
-## [Demo](https://sharedrive-123.herokuapp.com/)
+## [Demo](https://sharedrive-123.onrender.com)
 
 ![](./github/homepage.png)
 

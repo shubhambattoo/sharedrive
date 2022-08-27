@@ -10,7 +10,7 @@
     "dev": "nodemon server.js",
     "watch:js": "rollup --config rollup.config.js -w",
     "build:js": "rollup --config rollup.config.js",
-    "heroku-postbuild": "npm run build:js && mkdir uploads"
+    "build": "npm install && npm run build:js && mkdir uploads"
   },
   "keywords": [],
   "author": "shubhambattoo",
@@ -18,10 +18,10 @@
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "mongoose": "^6.0.7",
-    "multer": "^1.4.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3",
+    "multer": "^1.4.5-lts.1",
     "pug": "^3.0.2",
     "uuid": "^8.3.2"
   },
